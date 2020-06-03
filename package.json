@@ -1,0 +1,19 @@
+{
+  "name": "vite-test",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "pnpm run serve:dev",
+    "serve:dev": "vite",
+    "serve:prod": "pnpx browser-sync ./dist --single --no-notify --no-ui",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "^3.0.0-beta.14",
+    "vue-router": "^4.0.0-alpha.12"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-beta.14",
+    "browser-sync": "^2.26.7",
+    "vite": "^0.20.0"
+  }
+}
