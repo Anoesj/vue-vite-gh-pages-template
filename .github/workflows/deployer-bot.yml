@@ -28,6 +28,9 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }} 
-    - run: npm i
-    - run: npm run build
+        node-version: ${{ matrix.node-version }}
+    - name: Install pnpm
+      run: npm i -g pnpm
+    - run: pnpm i
+    - name: Build app
+      run: pnpm run build
