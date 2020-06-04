@@ -37,7 +37,10 @@ jobs:
     - run: pnpm i
     - name: Build app
       run: pnpm run build
-    - uses: maxheld83/ghpages@v0.3.0
+    - name: GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2.0.1
+      with:
+        target_branch: gh-pages
+        build_dir: dist
       env:
-        BUILD_DIR: dist/
-        GH_PAT: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
