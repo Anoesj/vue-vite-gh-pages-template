@@ -1,2 +1,4 @@
 # vite-test
-Experimenteren met Vite en Vue 3
+Experimenteren met Vite, Vue 3 en GitHub Actions
+
+![Deploy Bot](https://github.com/studio-fonkel/vite-test/workflows/Deployer%20Bot/badge.svg)
