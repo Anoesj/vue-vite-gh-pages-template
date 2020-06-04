@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const baseURL = process.env.BASE_URL;
 console.log(`BASE_URL: ${baseURL}\nRouter base: ${location.pathname}`)
-const routerHistory = createWebHistory(location.pathname);
+const routerHistory = createWebHistory(baseURL);
 
 const router = createRouter({
   history: routerHistory,
