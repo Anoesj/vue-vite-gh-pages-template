@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" :src="logoPath"/>
-  <HelloWorld msg="Hello Vue 3.0 + Vite"/>
+  <HelloWorld msg="Vue 3.0 + Vite + GitHub Actions experiment"/>
   <p>Environment: {{ env }}</p>
   <p>Custom env variable test: {{ customEnvVarTest }}</p>
 </template>
