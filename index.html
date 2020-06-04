@@ -7,9 +7,9 @@
     <title>Vite App</title>
     <script>
       const { redirect } = sessionStorage;
-      console.log('Going to redirect to ' + redirect);
       delete sessionStorage.redirect;
       if (redirect !== location.href) {
+        console.log('Going to redirect to ' + redirect);
         history.replaceState(null, null, redirect);
       }
     </script>
