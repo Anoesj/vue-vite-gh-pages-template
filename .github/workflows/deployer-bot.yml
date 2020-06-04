@@ -36,7 +36,7 @@ jobs:
       run: npm i -g pnpm
     - run: pnpm i
     - name: Build app
-      run: pnpm run build
+      run: pnpm run build:prod
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.0.1
       with:
