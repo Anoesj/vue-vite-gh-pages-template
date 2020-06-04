@@ -5,7 +5,7 @@
     "serve": "pnpm run serve:dev",
     "serve:dev": "vite",
     "serve:prod": "pnpx browser-sync ./dist --single --no-notify --no-ui",
-    "build": "vite build"
+    "build": "vite build --base='./'"
   },
   "dependencies": {
     "vue": "^3.0.0-beta.14",
