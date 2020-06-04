@@ -34,3 +34,7 @@ jobs:
     - run: pnpm i
     - name: Build app
       run: pnpm run build
+    - uses: maxheld83/ghpages@v0.3.0
+      env:
+        BUILD_DIR: dist/
+        GH_PAT: ${{ secrets.GH_PAGES_PAT }}
