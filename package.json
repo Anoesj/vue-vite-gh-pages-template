@@ -2,9 +2,9 @@
   "name": "vite-test",
   "version": "0.0.0",
   "scripts": {
-    "serve": "pnpm run serve:dev",
-    "serve:dev": "vite",
-    "serve:prod": "pnpx browser-sync ./dist --single --no-notify --no-ui",
+    "serve": "pnpm run serve:src",
+    "serve:src": "vite",
+    "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
     "build:dev": "vite build --base='./'",
     "build:prod": "vite build --base='/vite-test/'"
