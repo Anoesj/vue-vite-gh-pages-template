@@ -10,6 +10,10 @@ const router = createRouter({
       component: () => import('./routes/Home.vue'),
     },
     {
+      path: '/contact',
+      component: () => import('./routes/Contact.vue'),
+    },
+    {
       path: '/:catchAll(.*)',
       component: () => import('./routes/Page404.vue'),
     },
