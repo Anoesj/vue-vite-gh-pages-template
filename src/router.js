@@ -20,4 +20,9 @@ const router = createRouter({
   ],
 });
 
+router.beforeEach((to, from, next) => {
+  console.log(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
+  next();
+})
+
 export { router };
