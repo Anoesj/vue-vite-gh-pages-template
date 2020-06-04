@@ -5,6 +5,9 @@ name: Deployer Bot
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  pull_request:
+    branches:
+    - master
   push:
     branches:
     - master
@@ -37,4 +40,4 @@ jobs:
     - uses: maxheld83/ghpages@v0.3.0
       env:
         BUILD_DIR: dist/
-        GH_PAT: ${{ secrets.GH_PAT }}
+        GH_PAT: ${{ secrets.GITHUB_TOKEN }}
