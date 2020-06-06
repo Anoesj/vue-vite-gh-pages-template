@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vite App</title>
     <script>
-      const { redirect } = sessionStorage;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        console.log('Going to redirect to ' + redirect);
-        history.replaceState(null, null, redirect);
-      }
+      // // TODO: This code is moved to index.hash.js on build. I think that's why the history.replaceState seems to be overwritten immediately.
+      // // Try to run this code BEFORE loading vue-router
+      // const { redirect } = sessionStorage;
+      // delete sessionStorage.redirect;
+      // if (redirect && redirect !== location.href) {
+      //   console.log('Going to redirect to ' + redirect);
+      //   history.replaceState(null, null, redirect);
+      // }
     </script>
   </head>
   <body>
