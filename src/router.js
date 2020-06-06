@@ -23,9 +23,10 @@ const router = createRouter({
   ],
 });
 
-const { redirect } = sessionStorage;
+let { redirect } = sessionStorage;
 delete sessionStorage.redirect;
 if (redirect && redirect !== location.pathname) {
+  redirect = redirect.replace(baseURL, '/')
   console.log('Going to redirect to ' + redirect);
   router.push(redirect);
 }
