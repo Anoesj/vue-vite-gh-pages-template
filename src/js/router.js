@@ -1,9 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { config } from './config.js';
 
-console.log(
-  `BASE_URL: ${process.env.BASE_URL}\n` +
-  `location.pathname: ${location.pathname}`
-);
+if (config.debug) {
+  console.log({
+    'process.env.BASE_URL': process.env.BASE_URL,
+    'location.pathname': location.pathname,
+  });
+}
 
 const routerHistory = createWebHistory(process.env.BASE_URL);
 
@@ -26,11 +29,10 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if (from.path === to.path) {
-    debugger;
+  if (config.debug) {
+    console.log(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
   }
 
-  console.log(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
   next();
 })
 

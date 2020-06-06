@@ -1,13 +1,14 @@
 {
   "name": "vite-test",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "serve": "pnpm run serve:src",
-    "serve:src": "vite --open=true",
+    "serve:src": "vite --open --debug",
     "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
-    "build:dev": "vite build --base='./' --sourcemap=true",
-    "build:prod": "vite build --base='/vite-test/' --sourcemap=true"
+    "build:dev": "vite build --base='./' --sourcemap",
+    "build:prod": "vite build --base='/vite-test/'",
+    "version": "bash scripts/version.sh"
   },
   "dependencies": {
     "vue": "^3.0.0-beta.14",

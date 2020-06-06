@@ -4,14 +4,17 @@
 </template>
 
 <script>
-  import logoPath from '../assets/logo.png';
+  import logoPath from '../../assets/logo.png';
 
   export default {
+
     name: 'App',
+
     data () {
       return {
         logoPath,
       };
     },
+
   };
 </script>
