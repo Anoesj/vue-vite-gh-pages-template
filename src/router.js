@@ -33,11 +33,10 @@ if (redirect && redirect !== location.pathname) {
 
 router.beforeEach((to, from, next) => {
   if (from.path === to.path) {
-    console.trace(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
+    debugger;
   }
-  else {
-    console.log(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
-  }
+
+  console.log(`%c${from ? from.path + ' ' : ''}→ ${to.path}`, 'background-color: #dee5ec; color: LightSlateGrey; padding: 2px 6px; border-radius: 3px;');
   next();
 })
 
