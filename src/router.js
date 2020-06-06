@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 const baseURL = process.env.BASE_URL;
-console.log(`BASE_URL: ${baseURL}\nRouter base: ${location.pathname}`);
+console.log(`BASE_URL: ${baseURL}\nlocation.pathname: ${location.pathname}`);
 
 const routerHistory = createWebHistory(baseURL);
 
@@ -25,7 +25,7 @@ const router = createRouter({
 
 const { redirect } = sessionStorage;
 delete sessionStorage.redirect;
-if (redirect && redirect !== location.href) {
+if (redirect && redirect !== location.pathname) {
   console.log('Going to redirect to ' + redirect);
   router.push(redirect);
 }
