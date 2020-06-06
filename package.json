@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "serve": "pnpm run serve:src",
-    "serve:src": "vite",
+    "serve:src": "vite --open=true",
     "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
-    "build:dev": "vite build --base='./'",
-    "build:prod": "vite build --base='/vite-test/'"
+    "build:dev": "vite build --base='./' --sourcemap=true",
+    "build:prod": "vite build --base='/vite-test/' --sourcemap=true"
   },
   "dependencies": {
     "vue": "^3.0.0-beta.14",
