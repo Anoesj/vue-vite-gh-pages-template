@@ -1,5 +1,5 @@
 {
-  "name": "vite-test",
+  "name": "vite-template",
   "version": "0.0.1",
   "scripts": {
     "serve": "pnpm run serve:src",
@@ -7,7 +7,7 @@
     "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
     "build:dev": "vite build --base='./' --sourcemap",
-    "build:prod": "vite build --base='/vite-test/'",
+    "build:prod": "vite build --base='/vite-template/'",
     "version": "bash scripts/version.sh"
   },
   "dependencies": {

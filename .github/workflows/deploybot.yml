@@ -5,9 +5,6 @@ name: DeployBot
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  pull_request:
-    branches:
-    - master
   push:
     branches:
     - master
@@ -28,16 +25,21 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout repository
       uses: actions/checkout@v2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
     - name: Install pnpm
       run: npm i -g pnpm
+
     - name: Install packages
       run: pnpm i
+
     - name: Build app
       run: pnpm run build:prod
+
     - name: GitHub Pages
       uses: crazy-max/ghaction-github-pages@v2.0.1
       with:
