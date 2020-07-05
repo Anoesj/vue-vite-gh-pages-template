@@ -1,12 +1,17 @@
 import { createApp } from 'vue';
 import { router } from './js/router.js';
-import { config } from './js/config';
+import { config } from './js/config.js';
 import App from './js/App.vue';
 import HelloWorld from './js/components/HelloWorld.vue';
 import PreloadableRouterLink from './js/components/PreloadableRouterLink.vue';
 import './css/index.css';
 
 const app = createApp(App);
+
+// Inject config into the Vue app, so it's available everywhere without the need to import config.js.
+for (const [key, value] of Object.entries(config)) {
+  app.config.globalProperties['$' + key] = value;
+}
 
 // Plugins
 app.use(router);

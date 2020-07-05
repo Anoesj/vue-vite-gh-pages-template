@@ -1,10 +1,10 @@
 <template>
   <img alt="Vue logo" :src="logoPath"/>
-  <HelloWorld msg="Vue 3.0 + Vite + GitHub Actions experiment"/>
+  <HelloWorld :msg="$appName"/>
   <br/>
-  <p>Environment: <strong>{{ env }}</strong></p>
-  <p>Base path: <strong>{{ basePath }}</strong></p>
-  <p>Custom env variable test: <strong>{{ customEnvVarTest }}</strong></p>
+  <p>Environment: <strong>{{ $mode }}</strong></p>
+  <p>Base path: <strong>{{ $basePath }}</strong></p>
+  <p>Custom .env variable test: <strong>{{ customEnvVarTest }}</strong></p>
 </template>
 
 <script>
@@ -12,14 +12,12 @@
 
   export default {
 
-    name: 'App',
+    name: 'Home',
 
     data () {
       return {
         logoPath,
-        env: import.meta.env.MODE,
         customEnvVarTest: import.meta.env.VITE_TEST,
-        basePath: import.meta.env.BASE_URL,
       };
     },
 
