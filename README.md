@@ -9,7 +9,11 @@ It's a setup with:
   - If you prefer `npm`, just replace `pnpm` with `npm` in the `"scripts"` section in `package.json`.
 
 ## Setup
-Just create a new repository using this template and you can start working immediately. Make sure to set the `--base` flag in the `build:prod` script in `package.json` to your production base path.
+Just create a new repository using this template, run `pnpm i` (or `npm i`) and you can start working immediately.
+
+### Production config
+- Make sure to set the `--base` flag in the `build:prod` script in `package.json` to your production base path.
+- Also, edit `public/404.html` and change `<meta http-equiv="refresh" content="0;URL='INSERT_BASE_URL_HERE'"></meta>` to use your production base path as well.
 
 ## How does it work?
 Builds will be made automatically after pushing to `master`, using a GitHub Actions workflow. They will also be deployed to GitHub Pages automatically, by pushing them to the `gh-pages` branch. All _you_ need to do is setup GitHub Pages on your repository.
