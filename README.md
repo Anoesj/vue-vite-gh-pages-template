@@ -6,10 +6,10 @@ It's a setup with:
 - Hosting: [GitHub Pages](https://pages.github.com/) with a crawler-proof SPA hack (no SEO penalties).
 - Automated deployments using [GitHub Actions](https://github.com/features/actions).
 - (optional) [pnpm](https://github.com/pnpm/pnpm) for managing Node.js packages. Why? Because it's strict, secure and faaaast 🚀.
-  - If you prefer `npm`, just replace `pnpm` with `npm` in the `"scripts"` section in `package.json`.
+  - If you prefer using `npm` or `yarn`, just replace `pnpm` in the `"scripts"` section in `package.json` with your preferred package manager, and change the GitHub Actions workflow to stop using `pnpm`.
 
 ## Setup
-Just create a new repository using this template, run `pnpm i` (or `npm i`) and you can start working immediately.
+Just create a new repository using this template, run `pnpm i` (or `npm` etc.) and you can start working immediately.
 
 ### Production config
 - Make sure to set the `--base` flag in the `build:prod` script in `package.json` to your production base path.
