@@ -3,12 +3,12 @@ import { config } from './config.js';
 
 if (config.debug) {
   console.log({
-    'process.env.BASE_URL': process.env.BASE_URL,
+    'import.meta.env.BASE_URL': import.meta.env.BASE_URL,
     'location.pathname': location.pathname,
   });
 }
 
-const routerHistory = createWebHistory(process.env.BASE_URL);
+const routerHistory = createWebHistory(import.meta.env.BASE_URL);
 
 const router = createRouter({
   history: routerHistory,

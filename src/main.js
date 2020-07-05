@@ -22,7 +22,7 @@ app.mount('#app');
 let { redirect } = sessionStorage;
 delete sessionStorage.redirect;
 if (redirect && redirect !== location.pathname) {
-  redirect = redirect.replace(process.env.BASE_URL, '/');
+  redirect = redirect.replace(import.meta.env.BASE_URL, '/');
 
   if (config.debug) {
     console.log('Going to redirect to ' + redirect);
