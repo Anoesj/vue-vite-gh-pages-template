@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "serve": "pnpm run serve:src",
-    "serve:src": "vite --open --debug",
+    "serve:src": "vite --open",
     "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
     "build:dev": "vite build --base='./' --sourcemap",
@@ -11,12 +11,12 @@
     "version": "bash scripts/version.sh"
   },
   "dependencies": {
-    "vue": "^3.0.0-beta.14",
+    "vue": "^3.0.0-beta.18",
     "vue-router": "^4.0.0-alpha.12"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-beta.14",
+    "@vue/compiler-sfc": "^3.0.0-beta.18",
     "browser-sync": "^2.26.7",
-    "vite": "^0.20.7"
+    "vite": "^1.0.0-beta.11"
   }
 }
