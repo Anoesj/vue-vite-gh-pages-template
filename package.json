@@ -8,7 +8,7 @@
     "serve:dist:dev": "pnpx browser-sync ./dist --single --no-notify --no-ui",
     "build": "pnpm run build:dev",
     "build:dev": "vite build --base='./' --sourcemap",
-    "build:prod": "vite build --base='/vite-template/'",
+    "build:prod": "vite build --base='/vue-vite-gh-pages-template/'",
     "version": "bash scripts/version.sh"
   },
   "dependencies": {

@@ -1,15 +1,23 @@
 <template>
   <nav>
-    <template v-for="([routeName, routePath], index) of menuLinks">
+    <template v-for="(routePath, routeName, index) of menuLinks">
       <preloadable-router-link
         :to="routePath"
         :key="index"
       >{{ routeName }}</preloadable-router-link>
-      <span class="separator" :key="index" v-if="index < menuLinks.size - 1"> | </span>
+      <span class="separator" :key="index" v-if="index < menuLinksAmount - 1"> | </span>
     </template>
   </nav>
 
-  <router-view/>
+  <main>
+    <router-view/>
+  </main>
+
+  <footer>
+    <p>
+      Grab this template at: <a href="https://github.com/Anoesj/vue-vite-gh-pages-template/">https://github.com/Anoesj/vue-vite-gh-pages-template/</a>
+    </p>
+  </footer>
 </template>
 
 <script>
@@ -17,12 +25,18 @@
 
     data () {
       return {
-        menuLinks: new Map(Object.entries({
+        menuLinks: {
           'Home': '/',
           'Contact': '/contact',
           'Non-existent route': '/asdfghjkl',
-        })),
+        },
       };
+    },
+
+    computed: {
+      menuLinksAmount () {
+        return Object.keys(this.menuLinks).length;
+      },
     },
 
   };

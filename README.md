@@ -13,4 +13,7 @@ Builds will be made automatically after pushing to `master`, using a GitHub Acti
 
 Just create a new repository using this template and you can start working immediately. Vue Router Next is also installed. An example of preloading dynamically imported route components on link hover is also present.
 
+## Example
+See this template in action at https://anoesjsadraee.com/vue-vite-gh-pages-template/.
+
 ![DeployBot](https://github.com/anoesj/vite-test/workflows/DeployBot/badge.svg)
