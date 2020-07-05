@@ -1,6 +1,6 @@
 {
-  "name": "vite-template",
-  "description": "Experimental Vite, Vue 3, GitHub Actions & GitHub Pages setup.",
+  "name": "vue-vite-gh-pages-template",
+  "description": "A template for Vue 3 SPAs hosted on GitHub Pages (without the hassle).",
   "version": "0.0.1",
   "scripts": {
     "serve": "pnpm run serve:src",
