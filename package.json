@@ -1,5 +1,6 @@
 {
   "name": "vite-template",
+  "description": "Experimental Vite, Vue 3, GitHub Actions & GitHub Pages setup.",
   "version": "0.0.1",
   "scripts": {
     "serve": "pnpm run serve:src",
