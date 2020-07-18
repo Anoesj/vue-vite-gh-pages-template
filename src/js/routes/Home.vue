@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" :src="logoPath"/>
+  <img alt="Vue logo" width="200" height="200" :src="logoPath"/>
   <HelloWorld :msg="$appName"/>
   <br/>
   <p>Environment: <strong>{{ $mode }}</strong></p>
