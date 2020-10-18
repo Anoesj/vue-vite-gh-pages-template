@@ -1,11 +1,13 @@
 <template>
   <nav>
-    <template v-for="(routePath, routeName, index) of menuLinks">
+    <template
+      v-for="(routePath, routeName, index) of menuLinks"
+      :key="index"
+    >
       <preloadable-router-link
         :to="routePath"
-        :key="index"
       >{{ routeName }}</preloadable-router-link>
-      <span class="separator" :key="index" v-if="index < menuLinksAmount - 1"> | </span>
+      <span class="separator" v-if="index < menuLinksAmount - 1"> | </span>
     </template>
   </nav>
 
