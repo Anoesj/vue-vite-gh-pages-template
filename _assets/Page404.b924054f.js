@@ -1,0 +1,1 @@
+let e=document.createElement("style");e.innerHTML="",document.head.appendChild(e);import{o as n,c as t}from"./index.d5bfa253.js";const r={render:function(e,r){return n(),t("p",null,"Unfortunately, 404")},__file:"src/js/routes/Page404.vue"};export default r;
